@@ -1,0 +1,68 @@
+#pragma version 2
+txn TypeEnum
+int pay
+==
+txn Fee
+int 10000
+<
+&&
+txn FirstValid
+int 1
+%
+int 0
+==
+&&
+txn LastValid
+int 1
+txn FirstValid
++
+==
+&&
+txn Lease
+byte base64(023sdDE2)
+==
+&&
+gtxn 0 Sender
+gtxn 1 Sender
+==
+txn CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 Receiver
+addr 6ZHGHH5Z5CTPCF5WCESXMGRSVK7QJETR63M3NY5FJCUYDHO57VTCMJOBGY
+==
+&&
+gtxn 1 Receiver
+addr 7Z5PWO2C6LFNQFGHWKSK5H47IQP5OJW2M3HA2QPXTY3WTNP5NU2MHBW27M
+==
+&&
+gtxn 0 Amount
+int 4000
+==
+&&
+gtxn 1 Amount
+int 5000
+==
+&&
+txn CloseRemainderTo
+addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM
+==
+txn RekeyTo
+global ZeroAddress
+==
+&&
+txn Receiver
+global ZeroAddress
+==
+&&
+txn FirstValid
+int 12
+==
+&&
+txn Amount
+int 0
+==
+&&
+||
+&&
